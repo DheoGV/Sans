@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Deep Breath View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="deetBreath" id="Y6W-OH-hqX" customClass="DeepBreathViewController" customModule="SANS___NC1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N34-5M-jfq">
+                                <rect key="frame" x="0.0" y="211" width="390" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="ftZ-AQ-ZrT"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="tkh-7d-IeK" kind="embed" id="gLO-8f-Eq1"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deep Breathing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhX-4S-q4G">
+                                <rect key="frame" x="10" y="127" width="370" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zX-Hp-gab">
+                                <rect key="frame" x="158" y="650" width="75" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Group 11"/>
+                                <connections>
+                                    <action selector="pauseAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tlA-i0-Vbh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nX6-HN-52F">
+                                <rect key="frame" x="158" y="650" width="75" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Group 12"/>
+                                <connections>
+                                    <action selector="playAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Vv4-jK-101"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="N34-5M-jfq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Czb-lW-59m"/>
+                            <constraint firstItem="hhX-4S-q4G" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="83" id="Oqp-vE-1Si"/>
+                            <constraint firstItem="N34-5M-jfq" firstAttribute="top" secondItem="hhX-4S-q4G" secondAttribute="bottom" constant="50" id="bRF-hp-kCN"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="N34-5M-jfq" secondAttribute="trailing" id="hWz-iw-LA0"/>
+                            <constraint firstItem="hhX-4S-q4G" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="xzl-r4-m8Q"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hhX-4S-q4G" secondAttribute="trailing" constant="10" id="yG4-jb-RfU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="breathContainer" destination="N34-5M-jfq" id="Sqg-uV-7cP"/>
+                        <outlet property="pauseButton" destination="9zX-Hp-gab" id="hgT-9t-MSb"/>
+                        <outlet property="playButton" destination="nX6-HN-52F" id="T7U-6l-eBn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2s2-iL-uDy">
+            <objects>
+                <viewController id="tkh-7d-IeK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6wU-zc-b0j">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="250"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6GV-fi-M5a"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jch-RW-XGw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928" y="74"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Group 11" width="650" height="650"/>
+        <image name="Group 12" width="450" height="450"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

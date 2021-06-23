@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mantra View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="Mantra" id="Y6W-OH-hqX" customClass="MantraViewController" customModule="SANS___NC1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nE1-7H-NFX">
+                                <rect key="frame" x="10" y="649.66666666666663" width="370" height="30"/>
+                                <state key="normal" title="Change The Mantra"/>
+                                <connections>
+                                    <action selector="mantraAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="WzZ-Ze-8Pf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeat The Mantra" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdJ-Ys-2If">
+                                <rect key="frame" x="10" y="127.00000000000001" width="370" height="33.666666666666671"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Everything's going to be okay" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBi-ml-XRw">
+                                <rect key="frame" x="20" y="280.66666666666669" width="350" height="86"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" red="0.18363419180000001" green="0.38313251729999998" blue="0.44314724210000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dBi-ml-XRw" firstAttribute="top" secondItem="TdJ-Ys-2If" secondAttribute="bottom" constant="120" id="EOQ-oh-S0r"/>
+                            <constraint firstItem="nE1-7H-NFX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="J1y-RW-wbj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nE1-7H-NFX" secondAttribute="trailing" constant="10" id="XqW-Hm-zgP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TdJ-Ys-2If" secondAttribute="trailing" constant="10" id="aIc-bT-88M"/>
+                            <constraint firstItem="TdJ-Ys-2If" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="83" id="eD6-2V-VZw"/>
+                            <constraint firstItem="nE1-7H-NFX" firstAttribute="top" secondItem="TdJ-Ys-2If" secondAttribute="bottom" constant="489" id="kuF-EG-mZJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dBi-ml-XRw" secondAttribute="trailing" constant="20" id="s8R-Hg-6BR"/>
+                            <constraint firstItem="dBi-ml-XRw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="v1z-0p-7l5"/>
+                            <constraint firstItem="TdJ-Ys-2If" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="wRb-4g-ZbU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mantraLbl" destination="dBi-ml-XRw" id="QsG-HY-zdp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="87.723214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
